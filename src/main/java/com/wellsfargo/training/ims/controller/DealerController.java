@@ -8,11 +8,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
+/*Spring MVC provides @CrossOrigin annotation that marks the annotated method or type as permitting cross-origin requests.
+        The CORS (Cross-Origin Resource Sharing) allows a webpage to request additional resources into the browser from other domains
+        such as API data using AJAX, font files, style sheets etc.*/
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping
 public class DealerController {
