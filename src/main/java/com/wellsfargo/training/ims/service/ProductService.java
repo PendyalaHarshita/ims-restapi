@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 /*
  * A service layer is an additional layer in an MVC application that
  * mediates communication between a controller and repository layer.
@@ -27,5 +28,11 @@ public class ProductService {
     }
     public List<Product> findall(){
         return productRepository.findAll();
+    }
+    public Optional<Product> getSingleProduct(long id){
+        return productRepository.findById(id);
+    }
+    public void deleteProduct(long id){
+        productRepository.deleteById(id);
     }
 }
